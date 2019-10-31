@@ -47,6 +47,8 @@
     for (NSString *str in ary) {
         NSLog(@"str = %@", str);
     }
+    NSString *crashStr = ary[4];
+    NSLog(@"crash str = %@", crashStr);
 }
 
 - (CalculatorView *)cView
