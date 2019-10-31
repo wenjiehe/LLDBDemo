@@ -11,7 +11,7 @@
 
 ## Breakpoint Commands (断点命令)
 
-1. breakpoint list：查看所有断点列表
+1. `breakpoint list：`查看所有断点列表
 2. breakpoint delete：删除所有断点（可跟组号删除指定组）
 3. breakpoint disable/enable：禁用 启用指定断点
 4. breakpoint set -r some：遍历整个项目中包含 some 这个字符的所有方法并设置断点
