@@ -12,6 +12,9 @@
 @interface ViewController ()
 
 @property(nonatomic,strong)CalculatorView *cView;
+@property (strong, nonatomic) IBOutlet UIButton *leftButton;
+@property (strong, nonatomic) IBOutlet UIButton *rightButton;
+@property(nonatomic,copy)NSString *changeValueStr;
 
 @end
 
@@ -21,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.cView];
+    self.changeValueStr = @"like";
     
 }
 
@@ -40,15 +44,31 @@
     NSLog(@"%s", __FUNCTION__);
 }
 
+#pragma mark -- Action
+- (IBAction)clickRightButton:(UIButton *)sender {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (IBAction)clickLeftButton:(UIButton *)sender {
+    NSLog(@"%s", __FUNCTION__);
+}
+
 #pragma mark -- Tap
 - (void)tapView
 {
     NSArray *ary = @[@"look", @"book", @"test", @"bank", @"like"];
     for (NSString *str in ary) {
-        NSLog(@"str = %@", str);
+        self.changeValueStr = str;
+        NSLog(@"stttt = %@", self.changeValueStr);
     }
     NSString *crashStr = ary[4];
-    NSLog(@"crash str = %@", crashStr);
+    if ([crashStr isEqualToString:@"like"]) {
+        NSLog(@"like");
+    }else{
+        NSLog(@"bank");
+    }
+    
+    
 }
 
 - (CalculatorView *)cView
