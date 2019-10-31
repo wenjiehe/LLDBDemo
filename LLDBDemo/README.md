@@ -1,4 +1,9 @@
 #  LLDB
+
+## 摘要
+
+> LLDB 是一个有着 REPL 的特性和 C++,Python插件的开源调试器。LLDB绑定在Xcode内部，存在于主窗口底部的控制台中。 调试器允许你在程序运行的特定时暂停它，你可以查看变量的值，执行自定的指令，并且按照你所认为合适的步骤来操作程序的进展。
+
 ## Execution Commands (执行命令)
 
 1. process launch:运行当前进程
@@ -7,11 +12,11 @@
 4. thread step-inst:当前线程下一步（以一个汇编函数为一步)
 5. thread step-inst-over:当前线程下一步（遇到汇编函数就进入并且继续单步执行汇编指令
 6. thread step-out:退出当前帧栈
-7. thread return <RETURN EXPRESSION> :立即从当前选定的帧返回，返回值可选
+7. thread return NO :立即从当前选定的帧返回，返回值可选
 
 ## Breakpoint Commands (断点命令)
 
-1. `breakpoint list：`查看所有断点列表
+1. breakpoint list：查看所有断点列表
 2. breakpoint delete：删除所有断点（可跟组号删除指定组）
 3. breakpoint disable/enable：禁用 启用指定断点
 4. breakpoint set -r some：遍历整个项目中包含 some 这个字符的所有方法并设置断点
