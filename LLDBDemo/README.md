@@ -72,6 +72,15 @@
 1. apropos keyword:根据某个关键字搜索命令
 2. help list:获取所有命令列表
 
+## 脚本
+
+> LLDB启动的时候有一个会加载的文件~/.lldbinit,可以在这里面为命令设置别名,也可以运行你的.py后缀的脚本(command script ~/.nudge.py),当你在运行中或者设置了断点，由于其他原因进入调试模式，可以使用script进入Python编写模式:
+(```)
+    (lldb) script
+    Python Interactive Interpreter. To exit, type 'quit()', 'exit()'.
+    >>>
+(```)
+
 ## 参考文档
 
 1. [LLDB命令](https://lldb.llvm.org/use/map.html)
